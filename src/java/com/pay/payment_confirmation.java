@@ -83,10 +83,10 @@ public class payment_confirmation extends HttpServlet {
 //
 //            try {
 //                Class.forName("com.mysql.jdbc.Driver");
+
+//                conn = DriverManager.getConnection("jdbc:mysql://1.1.1.1:3306/YOURDATABASE", "YOUR_USERNAME", "YOUR_PASSWORD");
 //
-//                conn = DriverManager.getConnection("jdbc:mysql://198.12.148.102:3306/lipapay", "lipapay", "mysql@lipapay");
-//
-//                PreparedStatement pstmt = conn.prepareStatement("INSERT INTO core_record (text) values(?)");
+//                PreparedStatement pstmt = conn.prepareStatement("INSERT INTO TABLE (text) values(?)");
 //                pstmt.setString(1, parameter);
 //
 //                pstmt.executeUpdate();
