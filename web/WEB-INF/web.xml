@@ -4,18 +4,24 @@
         <servlet-name>payment_confirmation</servlet-name>
         <servlet-class>com.pay.payment_confirmation</servlet-class>
     </servlet>
+<<<<<<< HEAD
     <servlet>
         <servlet-name>pay_confirm</servlet-name>
         <servlet-class>com.pay.pay_confirm</servlet-class>
     </servlet>
+=======
+>>>>>>> 711796f638d50204035ebf1d35bcc9121f7ffe55
     <servlet-mapping>
         <servlet-name>payment_confirmation</servlet-name>
         <url-pattern>/payment_confirmation</url-pattern>
     </servlet-mapping>
+<<<<<<< HEAD
     <servlet-mapping>
         <servlet-name>pay_confirm</servlet-name>
         <url-pattern>/pay_confirm</url-pattern>
     </servlet-mapping>
+=======
+>>>>>>> 711796f638d50204035ebf1d35bcc9121f7ffe55
     <session-config>
         <session-timeout>
             30

@@ -5,12 +5,16 @@
         <data xmlns="http://www.netbeans.org/ns/web-project/3">
             <name>kilimall-payment</name>
             <minimum-ant-version>1.6.5</minimum-ant-version>
+<<<<<<< HEAD
             <web-module-libraries>
                 <library dirs="200">
                     <file>${libs.MySQLDriver.classpath}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>
+=======
+            <web-module-libraries/>
+>>>>>>> 711796f638d50204035ebf1d35bcc9121f7ffe55
             <web-module-additional-libraries/>
             <source-roots>
                 <root id="src.dir" name="Source Packages"/>
