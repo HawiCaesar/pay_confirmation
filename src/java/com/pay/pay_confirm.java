@@ -61,51 +61,54 @@ public class pay_confirm extends HttpServlet {
 
 //        try {
 //            TrustAllCerts(); //exchange certificates
-        ServletInputStream i = request.getInputStream();
+//        ServletInputStream i = request.getInputStream();
+//
+//        int c = 0;
+//        String xmlrpc = "";
+//        while ((c = i.read()) != -1) {
+//            xmlrpc += (char) c;
+//        }
+//
+//        //need to add code for more tags, to get details like name,paybill
+//        int startTag = xmlrpc.indexOf("<TransID>");
+//        int endTag = xmlrpc.indexOf("</TransID>");
+//        String parameter = xmlrpc.substring(startTag, endTag).replaceAll("<TransID>", "");
+//        //String parameter = "KC136NPD43";
+//
+//        Connection conn;
+//        PreparedStatement pstmt = null;
+//        try {
+//            Class.forName("com.mysql.jdbc.Driver");
+//
+//            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/YOURDATABASE", "YOUR_USERNAME", "YOUR_PASSWORD");
+//
+//            pstmt = conn.prepareStatement("INSERT INTO TABLE (text) values(?)");
+//            pstmt.setString(1, parameter);
+//
+//            pstmt.executeUpdate();
+//            pstmt.close();
+//        } catch (SQLException sqlex) {
+//
+//            response.setContentType("text/xml;charset=UTF-8");
+//            response.getWriter().println("<SQLException>" + sqlex + "</SQLException>");
+//
+//        } catch (ClassNotFoundException ex) {
+//            response.setContentType("text/xml;charset=UTF-8");
+//            response.getWriter().println("<ClassNotFoundException>" + ex + "</ClassNotFoundException>");
+//        }
 
-        int c = 0;
-        String xmlrpc = "";
-        while ((c = i.read()) != -1) {
-            xmlrpc += (char) c;
-        }
-
-        //need to add code for more tags, to get details like name,paybill
-        int startTag = xmlrpc.indexOf("<TransID>");
-        int endTag = xmlrpc.indexOf("</TransID>");
-        String parameter = xmlrpc.substring(startTag, endTag).replaceAll("<TransID>", "");
-        //String parameter = "KC136NPD43";
-
-        Connection conn;
-        PreparedStatement pstmt = null;
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/YOURDATABASE", "YOUR_USERNAME", "YOUR_PASSWORD");
-
-            pstmt = conn.prepareStatement("INSERT INTO TABLE (text) values(?)");
-            pstmt.setString(1, parameter);
-
-            pstmt.executeUpdate();
-            pstmt.close();
-        } catch (SQLException sqlex) {
-
-            response.setContentType("text/xml;charset=UTF-8");
-            response.getWriter().println("<SQLException>" + sqlex + "</SQLException>");
-
-        } catch (ClassNotFoundException ex) {
-            response.setContentType("text/xml;charset=UTF-8");
-            response.getWriter().println("<ClassNotFoundException>" + ex + "</ClassNotFoundException>");
-        }
-
-        //set repsonse type & structure response
+//        //set repsonse type & structure response
         response.setContentType("text/xml;charset=UTF-8");
         String resultxml = "<?xml version=\"1.0\" encoding=\"utf-8\" ?>\n";
         resultxml += "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:c2b=\"http://cps.huawei.com/cpsinterface/c2bpayment\">\n";
         resultxml += "<soapenv:Header/>\n";
         resultxml += "<soapenv:Body>\n";
-        resultxml += "<c2b:C2BPaymentConfirmationResult>C2B Payment Transaction " + parameter + " result received.</c2b:C2BPaymentConfirmationResult>\n";
+        resultxml += "<c2b:C2BPaymentConfirmationResult>C2B Payment Transaction  result received.</c2b:C2BPaymentConfirmationResult>\n";
         resultxml += "</soapenv:Body>\n";
         resultxml += "</soapenv:Envelope>\n";
+        
+        
+        
 
         //send out responese
         response.getWriter().println(resultxml);
