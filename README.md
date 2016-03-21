@@ -29,3 +29,5 @@ It should describe how the customer initiates the payment right through to the e
 ## Preparing your web application to receive payment data from MPESA API
 
 Using the "Developers guide_Paybill&Buygoods Validation & Confirmation_v0.3" page 11-14 make a code section to be able to receive Confirmation request. 
+
+(Still writing and preparing the rest)
