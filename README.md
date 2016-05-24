@@ -1,4 +1,4 @@
-## MPESA API Integration - Pay Confirmation
+## MPESA API Integration - Payment Confirmation
 
 This is a simple guide on what you need and what to get ready for when integrating MPESA with your payment option.
 
