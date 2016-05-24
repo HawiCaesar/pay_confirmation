@@ -26,8 +26,6 @@ It should describe how the customer initiates the payment right through to the e
 
 5) SOAP UI - an open software used to test and interact with web API's services
 
-## Preparing your web application to receive payment data from MPESA API
+## Check out this simple tutorial I made,
 
-Using the "Developers guide_Paybill&Buygoods Validation & Confirmation_v0.3" page 11-14 make a code section to be able to receive Confirmation request. 
-
-(preparing an article on this)
+https://hawihustle.wordpress.com/2016/05/23/mpesa-api-integration-payment-confirmation/
