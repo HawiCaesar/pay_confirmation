@@ -1,4 +1,4 @@
-[DEPRECATED] This approach to integrating MPESA is no longer supported. Please follow MPESA's up to date documentation [here](https://developer.safaricom.co.ke/)
+### [DEPRECATED] This approach to integrating MPESA is no longer supported. Please follow MPESA's up to date documentation [here](https://developer.safaricom.co.ke/)
 
 ## MPESA API Integration - Payment Confirmation
 
